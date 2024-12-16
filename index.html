@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooooh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" id="card">
+            <div class="card-front">Open Me!</div>
+            <div class="card-back">
+                <button class="close-btn" id="closeBtn">&times;</button>
+                <div class="letter">
+                    <h1>Hi Pooh!,</h1>
+                    <p>I just want to tell you that the only thing you need to hear right now is that it's not your fault this all happened. 
+                        I never wanted to be that person who would put you in the screen right now. 
+                        I know sometimes you expect certain things from me that you would have done for me. 
+                        I just want to tell you that if I’m not good at it, that doesn’t mean I don’t care. I’m just not familiar with the things you’re used to. 
+                        I know you are not doing well with all this but I want you to be at your best when you come back.
+                        Thank you for being exactly who you are and for offering me a friendship I've wanted and needed in my life. 😊 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const card = document.getElementById('card');
+        const closeBtn = document.getElementById('closeBtn');
+
+        card.addEventListener('click', () => {
+            card.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', (event) => {
+            event.stopPropagation();
+            card.classList.remove('open');
+        });
+    </script>
+</body>
+</html>
